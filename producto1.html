@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tienda</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.cdnfonts.com/css/barlow-semi-condensed-2"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <ul id="dropdown1" class="dropdown-content">
+      <li><a href="perfilDatos.html">Ver perfil</a></li>
+      <li class="divider"></li>
+      <li><a href="producto.html">Cerrar sesión</a></li>
+    </ul>
+    <ul id="dropdown2" class="dropdown-content">
+      <li><a href="perfilDatos.html">Ver perfil</a></li>
+      <li class="divider"></li>
+      <li><a href="producto.html">Cerrar sesión</a></li>
+    </ul>
+    <!--si van a hacer cambios de agregar paginas o cosas por el estilo intenten cambiarlo primero en el index y luego aplicarlo a los demas-->
+    <!--inicio del navbar (todo lo que es la barra superior para pasar de pagina en pagina), 
+      al crear una pagina nueva todo esto se debe copiar  y pegar tmb-->
+    <nav>
+      <div class="nav-wrapper #000000 black">
+        <a href="index1.html" class="brand-logo center"
+          ><img src="img/logo6.png" alt="logo" width="110" height="60"
+        /></a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+          ><i class="material-icons">menu</i></a
+        >
+        <!--estas son las paginas que aparecen arriba a la izquierda-->
+        <ul class="left hide-on-med-and-down" id="menu-side">
+          <li class="texto1"><a href="index1.html">Inicio</a></li>
+          <li class="texto1"><a href="tienda1.html">Tienda</a></li>
+          <li class="texto1"><a href="nostros1.html">Sobre Nosotros</a></li>
+          <li class="texto1"><a href="contacto1.html">Contacto</a></li>
+        </ul>
+        <!--estas son las paginas que aparecen cuando la pagina se hace mas pequeña-->
+        <ul class="right hide-on-med-and-down" id="menu-side">
+          <li>
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Perfil<i class="material-icons right">arrow_drop_down</i></a></li>
+          </li>
+          <li>
+            <a href="carrito1.html"><i class="material-icons">shopping_cart</i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--fin del navbar-->
+    <!--esto es el navbar que se activa cuando la pagina se achica
+    esto tmb se debe copiar y pegar al crear nueva pagina-->
+    <!--inicio navbar mobile-->
+    <ul class="sidenav" id="mobile-demo">
+      <li class="texto1"><a href="index1.html">Inicio</a></li>
+      <li class="texto1"><a href="tienda1.html">Tienda</a></li>
+      <li class="texto1"><a href="nostros1.html">Sobre Nosotros</a></li>
+      <li class="texto1"><a href="contacto1.html">Contacto</a></li>
+      <li class="texto1"><a href="carrito1.html">Carro </a></li>
+      <hr />
+      </li>
+      <li>
+        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Perfil<i class="material-icons right">arrow_drop_down</i></a></li>
+      </li>
+    </ul>
+    <!--fin navbar mobile-->
+
+    <div class="container">
+    <div class="row">
+      <div class="col s6">
+        <img
+          class=" foto1 "
+          height="320"
+          width="320"
+          src="img/macetero.jfif"
+        />
+      </div>
+      
+      <div class="col s5 link">
+        <h4>MACETA CEMENTO CUADRADA</h4>
+      </div>
+      <div class="col s5 precioprod">
+        <h6>$34.990</h6>
+      </div>
+      <div class="col s5 texto1">
+        <h6>Macetero cuadrado hecho de cemento.</h6>
+      </div>
+      <div class="col s5 texto1">
+        <h6 class="left-align">
+          <i class="material-icons tiny">check</i> 3 disponibles
+        </h6>
+      </div>
+      <div class="col s5 texto1">
+        <h6>Medidas: 32x32 cm.</h6>
+        <br />
+        <hr />
+      </div>
+      <div class="col s5">
+        <a class="waves-effect waves-light modal-trigger" href="carrito1mac.html"
+          ><button
+            class="btn waves-effect waves-light #424242 grey darken-3 texto1 btn1"
+            type="submit"
+            name="action"
+          >
+            Añadir al carrito
+            <i class="material-icons right">add_shopping_cart</i>
+          </button></a
+        >
+      </div>
+      <div class="col s1 icon2">
+        <a onclick="M.toast({html: 'Se agregó a su lista de deseados'})" class="btn waves-effect waves-light #424242 grey darken-3 texto1"><i class="material-icons">favorite_border</i></a>
+        
+      </div>
+    </div>
+</div>
+
+    <br /><br /><br /><br />
+    <footer class="page-footer #2e7d32 green darken-3 texto1">
+      <div class="container">
+        <div class="row">
+          <div class="col s4">
+            <h5>Mi cuenta</h5>
+            <ul>
+              <li>
+                <a class="grey-text text-lighten-3 texto1" href="perfilDatos.html"
+                  >Mi cuenta</a
+                >
+              </li>
+              <br />
+              <li>
+                <a class="grey-text text-lighten-3 texto1 modal-trigger" href="Deseados.html"
+                  >Lista de deseados</a
+                >
+              </li>
+              <br />
+              <li>
+                <a class="grey-text text-lighten-3 texto1" href="carrito1.html"
+                  >Carro de compras</a
+                >
+              </li>
+              <br />
+              <li>
+                <a class="grey-text text-lighten-3 texto1 modal-trigger" href="Compras.html">Pedidos</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col s4">
+            <h5 class="white-text texto1">Enlaces</h5>
+            <ul>
+              <li>
+                <a class="grey-text text-lighten-3 texto1" href="index.html"
+                  >Inicio</a
+                >
+              </li>
+              <br />
+              <li>
+                <a class="grey-text text-lighten-3 texto1" href="tienda.html"
+                  >Tienda</a
+                >
+              </li>
+              <br />
+              <li>
+                <a
+                  class="grey-text text-lighten-3 texto1"
+                  href="https://www.instagram.com/"
+                  >Instagram</a
+                >
+              </li>
+              <br />
+              <li>
+                <a
+                  class="grey-text text-lighten-3 texto1"
+                  href="https://www.facebook.com/"
+                  >Facebook</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col s4">
+            <h5 class="white-text texto1">Información</h5>
+            <ul>
+              <li>
+                <a class="grey-text text-lighten-3 texto1" href="nostros.html"
+                  >Sobre nosotros</a
+                >
+              </li>
+              <br />
+              <li>
+                <a class="grey-text text-lighten-3 texto1" href="contacto.html"
+                  >Contacto</a
+                >
+              </li>
+              <br />
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright #000000 black">
+        <div class="container center">© 2023 Copyright</div>
+      </div>
+    </footer>
+    <!--finFooter: -->
+
+    <!--scripts: -->
+    <!--estos scripts son para que que se puedan activar ciertas funciones como los formularios o el navbar mobile
+      (copiar y pegar todo al agregar una pagina)-->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var elems = document.querySelectorAll(".sidenav");
+        var instances = M.Sidenav.init(elems);
+
+        var elems = document.querySelectorAll(".slider");
+        var instances = M.Slider.init(elems, {
+          height: 500,
+          interval: 10000,
+        });
+        var elems = document.querySelectorAll(".modal");
+        var instances = M.Modal.init(elems);
+        var elems = document.querySelectorAll(".materialboxed");
+        var instances = M.Materialbox.init(elems);
+        var elems = document.querySelectorAll('.dropdown-trigger');
+        var instances = M.Dropdown.init(elems,);
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <style>
+      @import url("https://fonts.cdnfonts.com/css/besttia-brush");
+    </style>
+    <style>
+      @import url("https://fonts.cdnfonts.com/css/barlow-semi-condensed-2");
+    </style>
+  </body>
+</html>

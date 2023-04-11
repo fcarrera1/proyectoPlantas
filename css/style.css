@@ -1,0 +1,70 @@
+.card-title{
+    color: black;
+}
+/* esta es la fuente que se utiliza en los titulos: */
+.titulo1{
+    font-family: 'Besttia Brush', sans-serif;
+}
+.texto1{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+                                                
+}
+/* esto es para que cuando los links con la fuente quedan en azul, hacer que se vuelva de color negro*/
+.texto{
+    color: black;
+}
+.textob{
+    color: white;
+}
+
+.txtperfil{
+    color: white;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.icon1{
+    margin-bottom: 300px;
+    margin-left: 90%;
+    
+}
+
+.foto1{
+    margin-top: 100px;
+}
+.link{
+    margin-top: 120px;
+    color: black;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    text-decoration: none;
+}
+.precioprod{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+.btn1{
+    margin-top: 50px;
+}
+.icon2{
+    margin-top: 50px;
+    
+}
+ .perfil{
+     border-radius: 60%;
+     width: 200px;
+     margin-top: 10px;
+ }
+
+.selperfil{
+    margin-left: 10px;
+    margin-top: 28px;
+    color: black;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+        
+}
+.txtinfo{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: large;
+}
+ 
+.f2{
+    height: 100px;
+}
