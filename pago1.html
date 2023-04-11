@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carro</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.cdnfonts.com/css/besttia-brush"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.cdnfonts.com/css/barlow-semi-condensed-2"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <ul id="dropdown3" class="dropdown-content">
+      <li><a href="#!">visa (nacional)</a></li>
+      <li><a href="#!">visa</a></li>
+      <li><a href="#!">mastercard</a></li>
+      <li>
+        <a href="#!"><i class="material-icons">view_module</i>four</a>
+      </li>
+      <li>
+        <a href="#!"><i class="material-icons">cloud</i>five</a>
+      </li>
+    </ul>
+
+    <ul id="dropdown1" class="dropdown-content">
+      <li><a href="perfilDatos.html">Ver perfil</a></li>
+      <li class="divider"></li>
+      <li><a href="index.html">Cerrar sesión</a></li>
+    </ul>
+    <ul id="dropdown2" class="dropdown-content">
+      <li><a href="perfilDatos.html">Ver perfil</a></li>
+      <li class="divider"></li>
+      <li><a href="index.html">Cerrar sesión</a></li>
+    </ul>
+    <!--si van a hacer cambios de agregar paginas o cosas por el estilo intenten cambiarlo primero en el index y luego aplicarlo a los demas-->
+    <!--inicio del navbar (todo lo que es la barra superior para pasar de pagina en pagina), 
+      al crear una pagina nueva todo esto se debe copiar  y pegar tmb-->
+    <nav>
+      <div class="nav-wrapper #000000 black">
+        <a href="index1.html" class="brand-logo center"
+          ><img src="img/logo6.png" alt="logo" width="110" height="60"
+        /></a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+          ><i class="material-icons">menu</i></a
+        >
+        <!--estas son las paginas que aparecen arriba a la izquierda-->
+        <ul class="left hide-on-med-and-down" id="menu-side">
+          <li class="texto1"><a href="index1.html">Inicio</a></li>
+          <li class="texto1"><a href="tienda1.html">Tienda</a></li>
+          <li class="texto1"><a href="nostros1.html">Sobre Nosotros</a></li>
+          <li class="texto1"><a href="contacto1.html">Contacto</a></li>
+        </ul>
+        <!--estas son las paginas que aparecen cuando la pagina se hace mas pequeña-->
+        <ul class="right hide-on-med-and-down" id="menu-side">
+          <li>
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Perfil<i class="material-icons right">arrow_drop_down</i></a></li>
+          </li>
+          <li>
+            <a href="carrito1.html"><i class="material-icons">shopping_cart</i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--fin del navbar-->
+    <!--esto es el navbar que se activa cuando la pagina se achica
+    esto tmb se debe copiar y pegar al crear nueva pagina-->
+    <!--inicio navbar mobile-->
+    <ul class="sidenav" id="mobile-demo">
+      <li class="texto1"><a href="index1.html">Inicio</a></li>
+      <li class="texto1"><a href="tienda1.html">Tienda</a></li>
+      <li class="texto1"><a href="nostros1.html">Sobre Nosotros</a></li>
+      <li class="texto1"><a href="contacto1.html">Contacto</a></li>
+      <li class="texto1"><a href="carrito1.html">Carro </a></li>
+      <hr />
+      </li>
+      <li>
+        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Perfil<i class="material-icons right">arrow_drop_down</i></a></li>
+      </li>
+    </ul>
+    <!--fin navbar mobile-->
+    <!-- Modal Structure -->
+    <!-- modal registrarse -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4 class="texto1">Registrarse</h4>
+        <div class="row">
+          <form action="" method="get" class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <label for="Nombre" class="texto1">Nombre: </label>
+                <input
+                  type="text"
+                  required
+                  class="validate"
+                  id="txtNombre"
+                  name="txtNombre"
+                />
+              </div>
+              <div class="input-field col s6">
+                <label for="Apellido" class="texto1">Apellido: </label>
+                <input
+                  type="text"
+                  required
+                  class="validate"
+                  id="txtApellido"
+                  name="txtApellido"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <label for="Usuario" class="texto1">Nombre Usuario: </label>
+                <input
+                  type="text"
+                  required
+                  id="txtUsuario"
+                  name="txtUsuario"
+                  class="validate"
+                />
+              </div>
+              <div class="row">
+                <div class="input-field col s6">
+                  <label for="password" class="texto1">Contraseña:</label>
+                  <input
+                    type="password"
+                    required
+                    id="txtPass"
+                    name="txtPass"
+                    class="validate"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <label for="email" class="texto1">Email</label>
+                <input
+                  type="email"
+                  required
+                  id="txtEmail"
+                  name="txtEmail"
+                  class="validate"
+                />
+              </div>
+            </div>
+            <input
+              class="right btn btn-success"
+              type="submit"
+              id="btnLogin"
+              name="btnLogin"
+              value="Registrarse"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--fin modal 1:-->
+
+    <!--inicio modal 2: es el formulario para iniciar sesion (lo ideal tmb seria copiarlo y pegarlo para que puedan acceder desde cualquier pagina)-->
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+        <h4 class="texto1">Iniciar sesión</h4>
+        <div class="row">
+          <form action="index1.html" method="get" class="col s12">
+            <div class="row">
+              <div class="input-field col s12">
+                <label for="usuario" class="texto1">Nombre Usuario:</label>
+                <input
+                  type="text"
+                  
+                  class="validate"
+                  id="txtUser"
+                  name="txtUser"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <label for="usuario" class="texto1">Contraseña:</label>
+                <input
+                  type="password"
+                  
+                  class="validate"
+                  id="txtPass"
+                  name="txtPass"
+                />
+              </div>
+            </div>
+            <input
+              class="right btn btn-success"
+              type="submit"
+              id="btnLogin"
+              name="btnLogin"
+              value="Ingresar"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- fin modal iniciar sesion -->
+
+    <!--checkout-->
+
+    <div class="row section">
+      <div class="col s8">
+        <ul class="collapsible popout">
+          <li>
+            <div class="collapsible-header">
+              <i class="material-icons">info</i>Datos
+            </div>
+            <div class="collapsible-body">
+              <div class="row">
+                <form class="col s12">
+                  <div class="row">
+                    <div class="input-field col s6">
+                      <input id="first_name" type="text" class="validate" />
+                      <label for="first_name">Nombre</label>
+                    </div>
+                    <div class="input-field col s6">
+                      <input id="last_name" type="text" class="validate" />
+                      <label for="last_name">Apellidos</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="disabled" type="text" class="validate" />
+                      <label for="disabled">Correo electrónico</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s6">
+                      <input id="password" type="password" class="validate" />
+                      <label for="password">Télefono de contacto</label>
+                    </div>
+                    <div class="input-field col s6">
+                      <input id="email" type="email" class="validate" />
+                      <label for="email">Rut</label>
+                    </div>
+                  </div>
+                  <input
+                    class="right btn btn-success"
+                    type="submit"
+                    id="btnDatos"
+                    name="btnLogin"
+                    value="Siguiente"
+                  />
+                </form>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="collapsible-header">
+              <i class="material-icons">place</i>Dirección
+            </div>
+            <div class="collapsible-body">
+              <div class="row">
+                <form class="col s12">
+                  <div class="row">
+                    <div class="input-field col s6">
+                      <input id="region" type="text" class="validate" />
+                      <label for="region">Región</label>
+                    </div>
+                    <div class="input-field col s6">
+                      <input id="comuna" type="text" class="validate" />
+                      <label for="comuna">Comuna</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="calle" type="text" class="validate" />
+                      <label for="calle">Calle</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s6">
+                      <input id="numero" type="text" class="validate" />
+                      <label for="numero">Número de casa o depto</label>
+                    </div>
+                  </div>
+                  <input
+                    class="right btn btn-success"
+                    type="submit"
+                    id="btnDatos"
+                    name="btnLogin"
+                    value="Siguiente"
+                  />
+                </form>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="collapsible-header">
+              <i class="material-icons">payment</i>Método de pago
+            </div>
+            <div class="collapsible-body">
+              <div class="row">
+                <form class="col s12" action="recibo.html">
+                  <div class="row">
+                    <div class="input-field col s6">
+                      <select>
+                        <option value="" disabled selected>Método de pago</option>
+                        <option value="1">Visa</option>
+                        <option value="2">Mastercard</option>
+                        <option value="3">Visa (nacional)</option>
+                      </select>
+                    </div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s4">
+                      <input id="nrotarjeta" type="text" class="validate" />
+                      <label for="nrotarjeta">Número de tarjeta</label>
+                    </div>
+                    <div class="input-field col s2">
+                      <input id="mesCadu" type="text" class="validate" />
+                      <label for="mesCadu">mes caducidad</label>
+                    </div>
+                    <div class="col s1">
+                      <br>
+                      <p class="center">/</p>
+                    </div>
+                    <div class="input-field col s2">
+                      <input id="anioCadu" type="text" class="validate" />
+                      <label for="anioCadu">año caducidad</label>
+                    </div>
+                    <div class="input-field col s3">
+                      <input id="codseguridad" type="text" class="validate" />
+                      <label for="codseguridad">Código de seguridad</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col s12">
+                      <h5 class="texto1">INFORMACIÓN DE FACTURACIÓN</h5>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s3">
+                      <input id="nombre1" type="text" class="validate" />
+                      <label for="nombre1">Nombre</label>
+                    </div>
+                    <div class="input-field col s3">
+                      <input id="apellido1" type="text" class="validate" />
+                      <label for="apellido1">Apellidos</label>
+                    </div>
+                    <div class="col s1"></div>
+                    <div class="input-field col s4 ">
+                      <input id="Ciudad" type="text" class="validate" />
+                      <label for="Ciudad">Ciudad</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s6">
+                      <input id="Direc" type="text" class="validate" />
+                      <label for="Direc">Direccion</label>
+                    </div>
+                    <div class="col s1"></div>
+                    <div class="input-field col s4">
+                      <input id="zip" type="text" class="validate" />
+                      <label for="zip">Código postal
+                      </label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s4">
+                      <input id="País" type="text" class="validate" />
+                      <label for="País">País</label>
+                    </div>
+                    <div class="input-field col s4">
+                      <input id="fono" type="text" class="validate" />
+                      <label for="fono">Teléfono</label>
+                    </div>
+                  </div>
+                  <input
+                    class="right btn btn-success"
+                    type="submit"
+                    id="btnDatos"
+                    name="btnLogin"
+                    value="Comprar"
+                  />
+                </form>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="col s4">
+        <table class="texto1">
+          <thead>
+            <tr>
+              <th>Tipo Producto</th>
+              <th>Producto</th>
+              <th>Precio</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>MACETA</td>
+              <td>MACETA CEMENTO CUADRADA | Medidas: 32x32 cm.</td>
+              <td>$34.990</td>
+            </tr>
+            <tr>
+              <td>TOTAL:</td>
+              <td>$34.990</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!--fin checkout-->
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br />
+    <!-- Footer -->
+    <footer class="page-footer #2e7d32 green darken-3 texto1">
+      <div class="container">
+        <div class="row">
+          <div class="col s4">
+            <h5>Mi cuenta</h5>
+            <ul>
+              <li>
+                <a class="grey-text text-lighten-3 texto1" href="perfilDatos.html"
+                  >Mi cuenta</a
+                >
+              </li>
+              <br />
+              <li>
+                <a class="grey-text text-lighten-3 texto1 modal-trigger" href="Deseados.html"
+                  >Lista de deseados</a
+                >
+              </li>
+              <br />
+              <li>
+                <a class="grey-text text-lighten-3 texto1" href="carrito1.html"
+                  >Carro de compras</a
+                >
+              </li>
+              <br />
+              <li>
+                <a class="grey-text text-lighten-3 texto1 modal-trigger" href="Compras.html">Pedidos</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col s4">
+            <h5 class="white-text texto1">Enlaces</h5>
+            <ul>
+              <li>
+                <a class="grey-text text-lighten-3 texto1" href="index.html"
+                  >Inicio</a
+                >
+              </li>
+              <br />
+              <li>
+                <a class="grey-text text-lighten-3 texto1" href="tienda.html"
+                  >Tienda</a
+                >
+              </li>
+              <br />
+              <li>
+                <a
+                  class="grey-text text-lighten-3 texto1"
+                  href="https://www.instagram.com/"
+                  >Instagram</a
+                >
+              </li>
+              <br />
+              <li>
+                <a
+                  class="grey-text text-lighten-3 texto1"
+                  href="https://www.facebook.com/"
+                  >Facebook</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col s4">
+            <h5 class="white-text texto1">Información</h5>
+            <ul>
+              <li>
+                <a class="grey-text text-lighten-3 texto1" href="nostros.html"
+                  >Sobre nosotros</a
+                >
+              </li>
+              <br />
+              <li>
+                <a class="grey-text text-lighten-3 texto1" href="contacto.html"
+                  >Contacto</a
+                >
+              </li>
+              <br />
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright #000000 black">
+        <div class="container center">© 2023 Copyright</div>
+      </div>
+    </footer>
+    <!--fin footer-->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var elems = document.querySelectorAll(".sidenav");
+        var instances = M.Sidenav.init(elems);
+
+        var elems = document.querySelectorAll(".slider");
+        var instances = M.Slider.init(elems, {
+          height: 500,
+          interval: 10000,
+        });
+        var elems = document.querySelectorAll(".modal");
+        var instances = M.Modal.init(elems);
+
+        var elems = document.querySelectorAll(".collapsible");
+        var instances = M.Collapsible.init(elems);
+
+        var elems = document.querySelectorAll('select');
+        var instances = M.FormSelect.init(elems);
+        var elems = document.querySelectorAll('.dropdown-trigger');
+        var instances = M.Dropdown.init(elems,);
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <style>
+      @import url("https://fonts.cdnfonts.com/css/besttia-brush");
+    </style>
+    <style>
+      @import url("https://fonts.cdnfonts.com/css/barlow-semi-condensed-2");
+    </style>
+  </body>
+</html>
